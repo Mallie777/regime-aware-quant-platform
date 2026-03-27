@@ -79,19 +79,7 @@ Running `python run_demo.py` will:
 - tests included
 - easy to extend into real-data workflows later
 
-## Good ways to talk about it in an interview
-
-You can say you built a **regime-aware multi-factor research platform** that:
-
-- simulates a multi-asset universe
-- computes factor alphas and risk state variables
-- converts scores into neutral, volatility-targeted positions
-- evaluates turnover, costs, and drawdowns
-- validates core logic with tests
-
 ## Next extensions
-
-If you want to push it further later, you can add:
 
 - real market data adapters
 - cointegration tests
