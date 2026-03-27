@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: quant-showcase
+Version: 0.1.0
+Summary: A showcase-grade multi-asset quantitative research and backtesting project
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: matplotlib>=3.7
+
+# Quant Showcase Project
+
+A showcase-grade **multi-asset quantitative research platform** built in Python.
+
+This project is designed to look strong on GitHub and in interviews. It is not a toy script. It includes:
+
+- synthetic market generation with latent regimes
+- cross-sectional alpha feature engineering
+- regime-aware signal blending
+- portfolio construction with exposure controls
+- transaction cost and turnover modelling
+- event-driven backtesting
+- risk analytics and tear sheets
+- unit tests
+- a reproducible demo pipeline
+
+## Strategy concept
+
+The strategy blends several quant ideas:
+
+1. **Cross-sectional mean reversion** on short horizons
+2. **Time-series momentum** on medium horizons
+3. **Volatility scaling** and drawdown-aware risk throttling
+4. **Regime overlays** inferred from market breadth, dispersion, and volatility
+5. **Portfolio neutrality constraints** to make it feel more institutional
+
+The result is a project that reads like a real research environment rather than a single notebook.
+
+## Repo structure
+
+```text
+quant_showcase_project/
+├── pyproject.toml
+├── README.md
+├── run_demo.py
+├── src/
+│   └── quant_showcase/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── utils.py
+│       ├── data.py
+│       ├── features.py
+│       ├── regimes.py
+│       ├── signals.py
+│       ├── portfolio.py
+│       ├── risk.py
+│       ├── backtester.py
+│       └── reporting.py
+└── tests/
+    ├── test_features.py
+    ├── test_portfolio.py
+    └── test_backtester.py
+```
+
+## Quick start
+
+```bash
+cd quant_showcase_project
+python -m pip install -e .
+python run_demo.py
+pytest
+```
+
+## What the demo produces
+
+Running `python run_demo.py` will:
+
+- generate synthetic prices and volumes for a universe of assets
+- fit the full research pipeline
+- run the backtest
+- print performance statistics
+- save charts to `outputs/`
+
+## Why this is good for GitHub
+
+- modular project architecture
+- realistic quant vocabulary and components
+- deterministic demo with seeded random state
+- tests included
+- easy to extend into real-data workflows later
+
+## Good ways to talk about it in an interview
+
+You can say you built a **regime-aware multi-factor research platform** that:
+
+- simulates a multi-asset universe
+- computes factor alphas and risk state variables
+- converts scores into neutral, volatility-targeted positions
+- evaluates turnover, costs, and drawdowns
+- validates core logic with tests
+
+## Next extensions
+
+If you want to push it further later, you can add:
+
+- real market data adapters
+- cointegration tests
+- Bayesian regime switching
+- convex optimisation
+- walk-forward validation
+- hyperparameter search
+- factor attribution dashboards
+
